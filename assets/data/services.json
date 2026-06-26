@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "name": "Royal Hair Studio",
+    "category": "Salon",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800",
+    "rating": 4.8,
+    "phone": "+919876543210",
+    "website": "https://example.com/salon",
+    "address": "Kalawad Road, Rajkot",
+    "description": "Haircut, beard styling, spa, facial and grooming services for men and women."
+  },
+  {
+    "id": "2",
+    "name": "QuickFix Plumbing",
+    "category": "Plumber",
+    "image": "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800",
+    "rating": 4.6,
+    "phone": "+919812345678",
+    "website": "https://example.com/plumber",
+    "address": "University Road, Rajkot",
+    "description": "Leakage repair, bathroom fitting, kitchen pipe work and emergency plumbing services."
+  },
+  {
+    "id": "3",
+    "name": "Bright Future Tuition",
+    "category": "Tuition",
+    "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800",
+    "rating": 4.7,
+    "phone": "+919898989898",
+    "website": "https://example.com/tuition",
+    "address": "Yagnik Road, Rajkot",
+    "description": "Maths, science, English and computer coaching for school and college students."
+  },
+  {
+    "id": "4",
+    "name": "FitZone Gym",
+    "category": "Fitness",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800",
+    "rating": 4.5,
+    "phone": "+919999111222",
+    "website": "https://example.com/gym",
+    "address": "150 Feet Ring Road, Rajkot",
+    "description": "Modern gym with cardio, strength training, weight loss programs and personal trainer support."
+  },
+  {
+    "id": "5",
+    "name": "HomeSpark Electrician",
+    "category": "Electrician",
+    "image": "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800",
+    "rating": 4.4,
+    "phone": "+919833445566",
+    "website": "https://example.com/electrician",
+    "address": "Mavdi, Rajkot",
+    "description": "Switchboard repair, wiring, fan installation, light fitting and electrical maintenance."
+  },
+  {
+    "id": "6",
+    "name": "CityCare Clinic",
+    "category": "Clinic",
+    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800",
+    "rating": 4.9,
+    "phone": "+919800112233",
+    "website": "https://example.com/clinic",
+    "address": "Race Course Road, Rajkot",
+    "description": "General checkup, basic treatment, health consultation and family healthcare support."
+  }
+]

@@ -1,0 +1,28 @@
+name: my_city_connect
+
+description: A Flutter mini project for browsing city service providers with Firebase Auth, Realtime Database, image picker, URL launcher, and API parsing.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: any
+  firebase_core: any
+  firebase_auth: any
+  firebase_database: any
+  http: any
+  shared_preferences: any
+  image_picker: any
+  url_launcher: any
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/data/services.json
