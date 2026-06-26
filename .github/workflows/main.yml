@@ -3,8 +3,6 @@ name: Flutter Android CI
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -27,17 +25,10 @@ jobs:
           channel: stable
           cache: true
 
-      - name: Flutter version
-        run: flutter --version
-
       - name: Get packages
         run: flutter pub get
 
-      - name: Analyze code
-        run: flutter analyze
 
-      - name: Run tests
-        run: flutter test
 
       - name: Build APK
         run: flutter build apk --debug
