@@ -1,43 +1,49 @@
-name: Flutter APK Release
+name: Flutter Android CI
 
 on:
   push:
-    tags:
-      - "v*"
-
-permissions:
-  contents: write
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
-    name: Build and Release APK
+    name: Build Flutter APK
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout project
         uses: actions/checkout@v4
 
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: "temurin"
-          java-version: "17"
+          distribution: temurin
+          java-version: 17
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          channel: "stable"
+          channel: stable
+          cache: true
 
-      - name: Get Flutter Packages
+      - name: Flutter version
+        run: flutter --version
+
+      - name: Get packages
         run: flutter pub get
 
-      - name: Build Release APK
-        run: flutter build apk --release
+      - name: Analyze code
+        run: flutter analyze
 
-      - name: Create GitHub Release
-        uses: ncipollo/release-action@v1
+      - name: Run tests
+        run: flutter test
+
+      - name: Build APK
+        run: flutter build apk --debug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
         with:
-          artifacts: "build/app/outputs/flutter-apk/app-release.apk"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref_name }}
-          name: Release ${{ github.ref_name }}
+          name: debug-apk
+          path: build/app/outputs/flutter-apk/app-debug.apk
