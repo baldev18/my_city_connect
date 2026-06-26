@@ -1,4 +1,4 @@
-name: Flutter Android CI
+name: Flutter Android APK Build
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build Flutter APK
+    name: Build APK
     runs-on: ubuntu-latest
 
     steps:
@@ -23,18 +23,15 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: stable
-          cache: true
 
       - name: Get packages
         run: flutter pub get
 
-
-
-      - name: Build APK
+      - name: Build Debug APK
         run: flutter build apk --debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: debug-apk
+          name: my-city-connect-debug-apk
           path: build/app/outputs/flutter-apk/app-debug.apk
